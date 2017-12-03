@@ -2,7 +2,7 @@
 
 function conexion(){
 	try {
-		$conexion = new PDO('mysql:host=localhost;dbname=evaa', 'root', '');
+		$conexion = new PDO('mysql:host=sql3.freemysqlhosting.net;dbname=sql3208765', 'sql3208765', 'KMKaYidIkp');
 		return $conexion;
 	} catch (PDOException $e) {
 		return false;
@@ -38,7 +38,6 @@ function fechaCorta($fecha){
 		$meridiano = "P.M.";
 		$hora = $hora - 12;
 	}
-
 
 	$fecha = "$dia/$mes/$year - $hora:$minuto $meridiano";
 	return $fecha;
