@@ -81,11 +81,8 @@ if (isset($_SESSION['usuario'])) {
 		}
 
 	}
-	if (!$acceso){
+	
 		require 'views/registro_evento.view.php';
-	}else {
-		
-	}
 	
 }
 else {
