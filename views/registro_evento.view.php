@@ -100,44 +100,12 @@
 
 	</div>
 
-	<textarea name="editor1"></textarea>
-		<script>
-			CKEDITOR.replace( 'editor1' );
-		</script>
-
-
 	<script type="text/javascript">
 		window.onload = function(){
 			editor = CKEDITOR.replace("editor");
-			CKFinder.setupCKEditor(editor, 'http://localhost/Proyecto/ckfinder');
+			CKFinder.setupCKEditor(editor, 'http://eventassitant.herokuapp.com/ckfinder');
 		}
 	</script>
 
 
-<?php
-	require('footer.php');
-
-	if (isset($_POST['submit'])) {
-		
-		try {
-			$conexion = new PDO('mysql:host=localhost;dbname=prueba_datos', 'root', '');
-			$text = $_POST['editor'];
-			$sentencia = $conexion->prepare(
-				'INSERT INTO articulos (texto) 
-				VALUES (:texto)'
-			);
-
-			//INSERT INTO articulos (texto) VALUES ("texto")
-			$sentencia->execute(array(
-				':texto' => $text
-			));
-
-			
-		} catch (Exception $e) {
-			echo "Error: " . $e->getMessage();
-		}
-
-
-	}
-
- ?>
+<?php require('footer.php'); ?>
