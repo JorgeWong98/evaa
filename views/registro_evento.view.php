@@ -103,7 +103,7 @@
 	<script type="text/javascript">
 		window.onload = function(){
 			editor = CKEDITOR.replace("editor");
-			CKFinder.setupCKEditor(editor, 'http://eventassitant.herokuapp.com/plugins/ckfinder');
+			CKFinder.setupCKEditor(editor, 'http://unattained-equivale.000webhostapp.com/plugins/ckfinder');
 		}
 	</script>
 
