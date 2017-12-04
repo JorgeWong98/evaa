@@ -103,9 +103,9 @@
 	<script type="text/javascript">
 		window.onload = function(){
 			editor = CKEDITOR.replace("editor");
-			CKFinder.setupCKEditor(editor, 'http://eventassitant.herokuapp.com/ckfinder');
+			CKFinder.setupCKEditor(editor, 'http://eventassitant.herokuapp.com/plugins/ckfinder');
 		}
 	</script>
 
 
-<?php require('footer.php'); ?>
+<?php require('footer.php'); ?> 
