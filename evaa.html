@@ -7,7 +7,10 @@
 	<body>
 		<textarea name="editor1"></textarea>
 		<script>
-			CKEDITOR.replace( 'editor1' );
+			window.onload = function(){
+			editor = CKEDITOR.replace("editor1");
+			CKFinder.setupCKEditor(editor, 'http://unattained-equivale.000webhostapp.com/plugins/ckfinder');
+		}
 		</script>
 	</body>
 </html>
