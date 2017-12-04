@@ -3,7 +3,8 @@
 <head>
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
-	<script src="Plugins/ckeditor/ckeditor.js"></script>
+	<!--<script src="Plugins/ckeditor/ckeditor.js"></script> -->
+	<script src="https://cdn.ckeditor.com/4.7.3/standard/ckeditor.js"></script>
 	<script src="Plugins/ckfinder/ckfinder.js"></script>
 	<script src="https://use.fontawesome.com/3f2f76ce22.js"></script> 
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
