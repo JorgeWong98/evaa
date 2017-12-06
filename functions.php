@@ -1,8 +1,8 @@
 <?php 
 
-function conexion(){
+function conexion($bd_config){
 	try {
-		$conexion = new PDO('mysql:host=sql3.freemysqlhosting.net;dbname=sql3208765', 'sql3208765', 'KMKaYidIkp');
+		$conexion = new PDO('mysql:host='.$bd_config['host'].';dbname='.$bd_config['database'], $bd_config['usuario'], $bd_config['pass']);
 		return $conexion;
 	} catch (PDOException $e) {
 		return false;

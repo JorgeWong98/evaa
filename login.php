@@ -1,5 +1,6 @@
 <?php session_start();
 
+require 'admin/config.php';
 require 'functions.php';
 
 if (isset($_SESSION['usuario'])) {
@@ -10,7 +11,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	$usuario = filter_var($_POST['user'], FILTER_SANITIZE_STRING);
 	$password = $_POST['pass'];
 
-	$conexion = conexion();
+	$conexion = conexion($bd_config);
 
 	$consulta = $conexion->prepare('
 		SELECT * FROM administradores WHERE usuario = :usuario AND clave = :pass

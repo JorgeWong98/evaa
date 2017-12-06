@@ -2,8 +2,9 @@
 
     if (isset($_SESSION['usuario'])) {
         require 'functions.php';
+        require 'admin/config.php';
 
-        $conexion = conexion();
+        $conexion = conexion($bd_config);
         $id_evento = (int)$_GET['id'];
 
         if (empty($id_evento)) {

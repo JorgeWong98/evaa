@@ -13,12 +13,16 @@
 						<div class="col-md-3 prueba">
 							<div class="hola">
 								<a href="evento.php?id=<?php echo $post['id']; ?>" class="titulo"><?php echo $post['nombre']; ?></a>
+								<div class="banner">
+									<a href="editar.php?id=<?php echo $post['id']; ?>" class="edit"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+								</div>
 								<hr class="linea">
 								<p class="info"><?php echo $post['extracto'];?></p>
 							</div>
 							<div class="fecha-div">
 								<p class="fecha">Fecha: <?php echo fechaCorta($post['fecha']);?></p>
 							</div>
+							
 						</div>
 					<?php endforeach; ?>
 					<div class="col-md-3 agrega" onclick="location.href='registro_evento.php';" style="cursor:pointer;" >

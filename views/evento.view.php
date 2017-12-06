@@ -3,7 +3,10 @@
     <div class="container">
         <div class="row nombre">
 			<div class="col-md-12">
-				<h2 class="titulo"><?php echo $evento['nombre']; ?> - Instituo Tecnologico de Nogales</h2>
+                <h2 class="titulo"><?php echo $evento['nombre']; ?> - Instituo Tecnologico de Nogales</h2>
+                <div class="banner">
+				    <a href="editar.php?id=<?php echo $_GET['id']; ?>" class="edit"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+				</div>
                 <hr>
 			</div>
 		</div>

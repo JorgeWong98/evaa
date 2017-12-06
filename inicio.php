@@ -1,31 +1,17 @@
 <?php session_start();
 
 	require 'functions.php';
-
+	require 'admin/config.php';
 
 	if (isset($_SESSION['usuario'])) {
-		$conexion = conexion();
+		$conexion = conexion($bd_config);
 		$sentencia = $conexion->prepare("SELECT * FROM eventos");
 		$sentencia->execute();
 		$s = $sentencia->fetchAll(); 
 
-		//var_dump($s);
-
-
-
 		require 'views/inicio.view.php';
-
-		/*if (!$s) {
-		//Si no hay posts
-		}*/
-
 	}
 	else{
 		header('Location: index.php');
 	}
-
-	
-	
-	
-
  ?>

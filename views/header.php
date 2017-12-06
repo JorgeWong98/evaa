@@ -23,7 +23,7 @@
 					
 					<a href="#" data-toggle="modal" data-target="#exampleModal">Contacto</a>
 					<?php if (isset($_SESSION['usuario'])) : ?>
-						<a href="cerrar.php">Cerrar Session</a>
+						<a href="cerrar.php">Cerrar Sesion</a>
 					<?php else : ?>
 						<a href="#">Precios</a>
 					<?php endif; ?>

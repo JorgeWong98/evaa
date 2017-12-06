@@ -2,6 +2,7 @@
 
 if (isset($_SESSION['usuario'])) {
 
+	require 'admin/config.php';
 	require 'functions.php';
 	$errores = '';
 	$acceso = false;
@@ -54,7 +55,7 @@ if (isset($_SESSION['usuario'])) {
 
 		if (empty($errores)) {
 			try {
-				$conexion = conexion();
+				$conexion = conexion($bd_config);
 
 				$consulta = $conexion->prepare('
 				INSERT INTO eventos (nombre, fecha, extracto, descripcion, creditos, locacion, organizadores)
@@ -81,7 +82,6 @@ if (isset($_SESSION['usuario'])) {
 		}
 
 	}
-	
 		require 'views/registro_evento.view.php';
 	
 }

@@ -184,11 +184,19 @@ header .contenedor_logo_menu .menu a:hover{
 
 .eventos .prueba .titulo {
 	display: inline-block;
-	width: 100%;
+	width: 70%;
 	font-size: 20px;
 	text-decoration: none;
 	color: #000;
 	font-weight: bold;
+}
+
+.banner {
+	float: right;
+}
+
+.banner .edit{
+	font-size: 30px;
 }
 
 .eventos .prueba .fecha {
